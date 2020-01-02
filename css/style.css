@@ -497,7 +497,7 @@ img {
 .col-3,
 .col-3-2, 
 .col-4 {
-    padding: 0 8px;
+    padding: 0 5px;
     margin: 15px 0 0 0;
 }
 @media only screen and (min-width: 701px) and (max-width: 1024px){
@@ -505,11 +505,17 @@ img {
         width: 50%;
         float: left;
     }
+    .home-page .post img {
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 1024px){
     .col-4 {
         width: 25%;
         float: left;
+    }
+    .home-page .post img {
+        width: 100%;
     }
 }
 /* Grid Style End  */
@@ -520,7 +526,9 @@ img {
     text-align: center;
 }
 .post .post-title h2 {
-    margin: 7px 0 10px 0;  
+    margin: 7px 0 10px 0; 
+    font-family: -apple-system; 
+    font-weight: 600;
 }
 .post .post-title a {
     text-decoration: none;
@@ -537,7 +545,7 @@ img {
 }
 .post img {
     border: 1px inset #fff;
-    /* width: 85%; */
+    width: 85%;
 }
 .post p {
     text-align: justify;
@@ -776,6 +784,7 @@ img {
    .single-page .col-3-2 {
         width: 55%;
         float: left;
+        padding: 0 15px;
     }
      .single-page .col-3 {
         width: 45%;
@@ -787,6 +796,7 @@ img {
     .single-page .col-3-2 {
         width: 65%;
         float: left;
+        padding: 0 15px;
     }
     .single-page .col-3 {
         width: 35%;
@@ -822,7 +832,6 @@ img {
     .about-us-widget .col-3 {
         width: 45%;
         float: left;
-        padding: 0 15px;
     }
 }
 
@@ -835,7 +844,6 @@ img {
     .about-us-widget .col-3 {
         width: 35%;
         float: left;
-        padding: 0 15px;
     }
 }
 /* About Us End */
