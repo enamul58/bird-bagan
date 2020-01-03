@@ -1,5 +1,8 @@
 jQuery(document).ready( function($){
-    
+
+    $(window).on("load", function(){
+        $('.preloder').fadeOut();
+    });    
     //for toggle
     $('#menu-trigger').click(function(){
         $('.menu > .main-menu').slideToggle();
@@ -31,4 +34,51 @@ function initSlider(){
         autoplay: true,
         autoplaySpeed: 2500
       });
+}
+
+$('#contact-submit').click( function(e){
+    e.preventDefault();
+    var error = false;
+
+    // Validate Your Name Field
+    var your_name = $('#your-name').val(); 
+    if(your_name == "") {
+        error = true;
+        $('#your-name').addClass('error').removeClass('no-error');
+    } else {
+        $('#your-name').addClass('no-error').removeClass('error');
+    }
+
+    // Validate Your Email Field
+    var your_email = $('#your-email').val(); 
+    if(your_email !== "" && ValidateEmail(your_email) ) {
+        $('#your-email').addClass('no-error').removeClass('error');
+    } else {
+        error = true;
+        $('#your-email').addClass('error').removeClass('no-error');
+    }
+    // Validate Your Subject Field
+    var your_subject = $('#your-subject').val(); 
+    if(your_subject == "") {
+        error = true;
+        $('#your-subject').addClass('error').removeClass('no-error');
+    } else {
+        $('#your-subject').addClass('no-error').removeClass('error');
+    }
+    // Validate Your Message Field
+    var your_message = $('#your-message').val(); 
+    if(your_message == "") {
+        error = true;
+        $('#your-message').addClass('error').removeClass('no-error');
+    } else {
+        $('#your-message').addClass('no-error').removeClass('error');
+    }
+});
+
+function ValidateEmail(mail) {
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+    return (true)
+  } else {
+    return (false)
+  }
 }

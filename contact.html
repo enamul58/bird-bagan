@@ -75,18 +75,18 @@
                         <p>
                             Please Below Section Give Information To Contact Us.
                         </p>
-                        <form action="#" method="post" class="contact-us-form">
+                        <form  id="contact-form" action="#" method="post" class="contact-us-form">
                             <div class="row">
                                 <div class="col-2">
-                                   <input type="text" name="yourname" placeholder="Your Name.">
-                                   <input type="email" name="youremail" placeholder="Your Email.">
-                                   <input type="text" name="yoursubject" placeholder="Your Subject.">
+                                   <input id="your-name" type="text" name="yourname" placeholder="Your Name.">
+                                   <input id="your-email" type="email" name="youremail" placeholder="Your Email.">
+                                   <input id="your-subject" type="text" name="yoursubject" placeholder="Your Subject.">
                                 </div>
                                 <div class="col-2">
-                                    <textarea cols="30" placeholder="Your Message..."></textarea>
+                                    <textarea id="your-message" cols="30" placeholder="Your Message..."></textarea>
                                 </div>
                             </div>
-                            <button class="btn" type="submit">Submit</button>
+                            <button id="contact-submit" class="btn" type="submit">Submit</button>
                         </form>
                     </article>
                     <div class="maps">
@@ -139,6 +139,7 @@
     </div> <!-- .container -->
     <script src="js/jQuery.js"></script>
     <script src="light-box/js/lightbox.js"></script>
+    <script src="slick/slick.min.js"></script>
     <script src="js/functions.js"></script>
 </body>
 </html>

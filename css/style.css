@@ -741,6 +741,12 @@ img {
 .contact-area .col-3-2 {
     padding: 0 15px;
 }
+.error {
+    border: 1px solid red!important;
+}
+.no-error {
+    border: 1px solid blueviolet!important;
+}
 @media only screen and (min-width: 450px) and (max-width: 700px){
     .col-2{
         width: 50%;
