@@ -36,6 +36,8 @@ function initSlider(){
       });
 }
 
+
+//form validation 
 $('#contact-submit').click( function(e){
     e.preventDefault();
     var error = false;
@@ -73,12 +75,37 @@ $('#contact-submit').click( function(e){
     } else {
         $('#your-message').addClass('no-error').removeClass('error');
     }
+
+    if(error == false){
+        $('#contact-form').submit();
+    }
 });
 
+
+//subscribe email
+$('#subscribe-submit').click( function(e){
+    e.preventDefault();
+    var error = false;
+
+    var your_email = $('#sub-your-email').val(); 
+    if(your_email !== "" && ValidateEmail(your_email) ) {
+        $('#sub-your-email').addClass('no-error').removeClass('error');
+    } else {
+        error = true;
+        $('#sub-your-email').addClass('error').removeClass('no-error');
+    }
+
+    if(error == false){
+        $('#subscribe-form').submit();
+    }
+});
+
+//email formate checking
 function ValidateEmail(mail) {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-    return (true)
-  } else {
-    return (false)
-  }
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+       return (true)
+     } else {
+       return (false)
+     }
 }
+   
